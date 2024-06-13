@@ -44,8 +44,14 @@ label{
 }
 .box{
 	width:96px;
-height:96px;
+  height:96px;
 	border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 30px;
 }
 #h3{
 	text-align:center;
