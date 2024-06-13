@@ -13,15 +13,15 @@ startBtn.addEventListener("click", getName => {
     container.innerHTML = `<h1  id="nmhd">Tic Tac Toe</h1>
 						 <h3 id="h3"></h3>
 						 <div id="flx">
-							 <div class="box" id="box_1"></div>
-							 <div class="box" id="box_2"></div>
-							 <div class="box" id="box_3"></div>
-							 <div class="box" id="box_4"></div>
-							 <div class="box" id="box_5"></div>
-							 <div class="box" id="box_6"></div>
-							 <div class="box" id="box_7"></div>
-							 <div class="box" id="box_8"></div>
-							 <div class="box" id="box_9"></div>
+							 <div class="box" id="1"></div>
+							 <div class="box" id="2"></div>
+							 <div class="box" id="3"></div>
+							 <div class="box" id="4"></div>
+							 <div class="box" id="5"></div>
+							 <div class="box" id="6"></div>
+							 <div class="box" id="7"></div>
+							 <div class="box" id="8"></div>
+							 <div class="box" id="9"></div>
 						 </div>`
 
     let h3 = document.getElementById("h3");
