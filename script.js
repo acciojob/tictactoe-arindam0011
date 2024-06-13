@@ -1,6 +1,6 @@
 //your JS code here. If required.
 
-const startBtn = document.getElementById("subbtn");
+const startBtn = document.getElementById("submit");
 
 startBtn.addEventListener("click", getName => {
     let p1 = document.getElementById("player1").value;
