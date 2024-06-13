@@ -1,4 +1,5 @@
 //your JS code here. If required.
+document.addEventListener("DOMContentLoaded", function() {
 
 const startBtn = document.getElementById("submit");
 
@@ -11,7 +12,7 @@ startBtn.addEventListener("click", getName => {
     let container = document.getElementById("nameCont");
     container.innerHTML = ``;
     container.innerHTML = `<h1  id="nmhd">Tic Tac Toe</h1>
-						 <h3 id="h3"></h3>
+						 <h3 class="message" id="h3"></h3>
 						 <div id="flx">
 							 <div class="box" id="1"></div>
 							 <div class="box" id="2"></div>
@@ -24,12 +25,12 @@ startBtn.addEventListener("click", getName => {
 							 <div class="box" id="9"></div>
 						 </div>`
 
-    let h3 = document.getElementById("h3");
-    let ct = 1;
+    let h3 = document.getElementsByClassName("message")[0];
+	console.log(h3);
     h3.innerText = `${window.localStorage.getItem("player_1")}, You're Up!`;
 
     let boxes = document.querySelectorAll(".box");
-
+  let ct = 1;
         boxes.forEach(box => {
             box.addEventListener("click", putValue)
             function putValue(event) {
@@ -76,4 +77,5 @@ startBtn.addEventListener("click", getName => {
         }
     }
         
-})
+});
+});
