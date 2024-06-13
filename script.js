@@ -3,8 +3,8 @@
 const startBtn = document.getElementById("subbtn");
 
 startBtn.addEventListener("click", getName => {
-    let p1 = document.getElementById("Player1").value;
-    let p2 = document.getElementById("Player2").value;
+    let p1 = document.getElementById("player1").value;
+    let p2 = document.getElementById("player2").value;
     window.localStorage.setItem("player_1", p1);
     window.localStorage.setItem("player_2", p2);
 
@@ -72,7 +72,7 @@ startBtn.addEventListener("click", getName => {
             return h3.innerText=`${window.localStorage.getItem("player_2")},Congatulations You Won!`
         }
         else if(ct == 10){
-            return h3.innerText = "Match Tied"
+            return h3.innerText = "Match Tied";
         }
     }
         
