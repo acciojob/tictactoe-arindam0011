@@ -31,7 +31,7 @@ startBtn.addEventListener("click", getName => {
   let ct = 1;
         boxes.forEach(box => {
             box.addEventListener("click", putValue);
-			
+
             function putValue(event) {
 				 let box = event.target;
 					    if (box.innerText == "") {
