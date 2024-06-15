@@ -25,7 +25,6 @@ startBtn.addEventListener("click", getName => {
 						 </div>`
 
     let h3 = document.getElementsByClassName("message")[0];
-    h3.innerText = Player1+", You're Up!";
 
     let boxes = document.querySelectorAll(".box");
   let ct = 1;
@@ -42,9 +41,9 @@ startBtn.addEventListener("click", getName => {
 					        }
 					        ct++;
 					        if (ct % 2 != 0) {
-					            h3.innerText = Player1 + ", You're Up!";
+					            h3.innerText = Player1 + ", You\'re Up!";
 					        } else {
-					            h3.innerText = Player2 + ", You're Up!";
+					            h3.innerText = Player2 + ", You\'re Up!";
 					        }
 					    }
                 checkWinCondition();
