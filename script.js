@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
 const startBtn = document.getElementById("submit");
 
 startBtn.addEventListener("click", getName => {
-    const Player1 = document.getElementById("player-1").value;
-    const Player2 = document.getElementById("player-2").value;
+    const Player1 = document.getElementById("player1").value;
+    const Player2 = document.getElementById("player2").value;
     
 
     let container = document.getElementById("nameCont");
@@ -37,11 +37,11 @@ startBtn.addEventListener("click", getName => {
 				let box=event.target;
                 if (box.innerText == "") {
                     if (ct % 2 == 0) {
-                        box.innerText = "O"
+                        box.innerText = "o"
                         h3.innerText = Player1+", You're Up!";
                     }
                     else {
-                        box.innerText = "✕"
+                        box.innerText = "x"
                         h3.innerText = Player2+", You're Up!";
                     }
                 }
@@ -51,25 +51,25 @@ startBtn.addEventListener("click", getName => {
 
         })
     function checkWinCondition() {
-        if(boxes[0].innerText == "✕" && boxes[1].innerText == "✕" && boxes[2].innerText == "✕"
-            || boxes[3].innerText == "✕" && boxes[4].innerText == "✕" && boxes[5].innerText == "✕"
-            || boxes[6].innerText == "✕" && boxes[7].innerText == "✕" && boxes[8].innerText == "✕"
-            || boxes[0].innerText == "✕" && boxes[4].innerText == "✕" && boxes[8].innerText == "✕"
-            || boxes[2].innerText == "✕" && boxes[4].innerText == "✕" && boxes[6].innerText == "✕"
-            || boxes[0].innerText == "✕" && boxes[3].innerText == "✕" && boxes[6].innerText == "✕"
-            || boxes[1].innerText == "✕" && boxes[4].innerText == "✕" && boxes[7].innerText == "✕"
-            || boxes[2].innerText == "✕" && boxes[5].innerText == "✕" && boxes[8].innerText == "✕"
+        if(boxes[0].innerText == "x" && boxes[1].innerText == "x" && boxes[2].innerText == "xx"
+            || boxes[3].innerText == "x" && boxes[4].innerText == "x" && boxes[5].innerText == "x"
+            || boxes[6].innerText == "x" && boxes[7].innerText == "x" && boxes[8].innerText == "x"
+            || boxes[0].innerText == "x" && boxes[4].innerText == "x" && boxes[8].innerText == "x"
+            || boxes[2].innerText == "x" && boxes[4].innerText == "x" && boxes[6].innerText == "x"
+            || boxes[0].innerText == "x" && boxes[3].innerText == "x" && boxes[6].innerText == "x"
+            || boxes[1].innerText == "x" && boxes[4].innerText == "x" && boxes[7].innerText == "x"
+            || boxes[2].innerText == "x" && boxes[5].innerText == "x" && boxes[8].innerText == "x"
         ){
             return h3.innerText= Player1+",Congatulations You Won!";
         }
-        else if(boxes[0].innerText == "O" && boxes[1].innerText == "O" && boxes[2].innerText == "O"
-            || boxes[3].innerText == "O" && boxes[4].innerText == "O" && boxes[5].innerText == "O"
-            || boxes[6].innerText == "O" && boxes[7].innerText == "O" && boxes[8].innerText == "O"
-            || boxes[0].innerText == "O" && boxes[4].innerText == "O" && boxes[8].innerText == "O"
-            || boxes[2].innerText == "O" && boxes[4].innerText == "O" && boxes[6].innerText == "O"
-            || boxes[0].innerText == "O" && boxes[3].innerText == "O" && boxes[6].innerText == "O"
-            || boxes[1].innerText == "O" && boxes[4].innerText == "O" && boxes[7].innerText == "O"
-            || boxes[2].innerText == "O" && boxes[5].innerText == "O" && boxes[8].innerText == "O"
+        else if(boxes[0].innerText == "o" && boxes[1].innerText == "o" && boxes[2].innerText == "o"
+            || boxes[3].innerText == "o" && boxes[4].innerText == "o" && boxes[5].innerText == "o"
+            || boxes[6].innerText == "o" && boxes[7].innerText == "o" && boxes[8].innerText == "o"
+            || boxes[0].innerText == "o" && boxes[4].innerText == "o" && boxes[8].innerText == "o"
+            || boxes[2].innerText == "o" && boxes[4].innerText == "o" && boxes[6].innerText == "o"
+            || boxes[0].innerText == "o" && boxes[3].innerText == "o" && boxes[6].innerText == "o"
+            || boxes[1].innerText == "o" && boxes[4].innerText == "o" && boxes[7].innerText == "o"
+            || boxes[2].innerText == "o" && boxes[5].innerText == "o" && boxes[8].innerText == "o"
         ){
             return h3.innerText=Player2+",Congatulations You Won!";
         }
