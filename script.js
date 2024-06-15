@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
 const startBtn = document.getElementById("submit");
 
 startBtn.addEventListener("click", getName => {
-    const Player1 = document.getElementById("player1").value;
-    const Player2 = document.getElementById("player2").value;
+    const Player1 = document.getElementById("player-1").value;
+    const Player2 = document.getElementById("player-2").value;
     
 
     let container = document.getElementById("nameCont");
@@ -60,9 +60,6 @@ startBtn.addEventListener("click", getName => {
             || boxes[1].innerText == "✕" && boxes[4].innerText == "✕" && boxes[7].innerText == "✕"
             || boxes[2].innerText == "✕" && boxes[5].innerText == "✕" && boxes[8].innerText == "✕"
         ){
-			 // boxes.forEach(box => {
-    //         box.removeEventListener("click", putValue);
-			 // }
             return h3.innerText= Player1+",Congatulations You Won!";
         }
         else if(boxes[0].innerText == "O" && boxes[1].innerText == "O" && boxes[2].innerText == "O"
@@ -74,9 +71,6 @@ startBtn.addEventListener("click", getName => {
             || boxes[1].innerText == "O" && boxes[4].innerText == "O" && boxes[7].innerText == "O"
             || boxes[2].innerText == "O" && boxes[5].innerText == "O" && boxes[8].innerText == "O"
         ){
-			// boxes.forEach(box => {
-   //          box.removeEventListener("click", putValue);
-			//  }
             return h3.innerText=Player2+",Congatulations You Won!";
         }
         else if(ct == 10){
