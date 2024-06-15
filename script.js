@@ -60,7 +60,7 @@ startBtn.addEventListener("click", getName => {
             || boxes[1].innerText == "x" && boxes[4].innerText == "x" && boxes[7].innerText == "x"
             || boxes[2].innerText == "x" && boxes[5].innerText == "x" && boxes[8].innerText == "x"
         ){
-            return h3.innerText= Player1+",Congatulations You Won!";
+            return h3.innerText= Player1+" congatulations you won!";
         }
         else if(boxes[0].innerText == "o" && boxes[1].innerText == "o" && boxes[2].innerText == "o"
             || boxes[3].innerText == "o" && boxes[4].innerText == "o" && boxes[5].innerText == "o"
@@ -71,7 +71,7 @@ startBtn.addEventListener("click", getName => {
             || boxes[1].innerText == "o" && boxes[4].innerText == "o" && boxes[7].innerText == "o"
             || boxes[2].innerText == "o" && boxes[5].innerText == "o" && boxes[8].innerText == "o"
         ){
-            return h3.innerText=Player2+",Congatulations You Won!";
+            return h3.innerText=Player2+" congatulations you won!";
         }
         else if(ct == 10){
             return h3.innerText = "Match Tied";
