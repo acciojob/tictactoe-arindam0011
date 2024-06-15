@@ -25,7 +25,6 @@ startBtn.addEventListener("click", getName => {
 						 </div>`
 
     let h3 = document.getElementsByClassName("message")[0];
-	console.log(h3);
     h3.innerText = Player1+", You're Up!";
 
     let boxes = document.querySelectorAll(".box");
@@ -36,13 +35,13 @@ startBtn.addEventListener("click", getName => {
             function putValue(event) {
 				let box=event.target;
                 if (box.innerText == "") {
-                    if (ct % 2 == 0) {
-                        box.innerText = "o"
-                        h3.innerText = Player1+", You're Up!";
-                    }
-                    else {
+                    if (ct % 2 != 0) {
                         box.innerText = "x"
                         h3.innerText = Player2+", You're Up!";
+                    }
+                    else {
+                        box.innerText = "o"
+                        h3.innerText = Player1+", You're Up!";
                     }
                 }
                 ct++;
@@ -51,7 +50,7 @@ startBtn.addEventListener("click", getName => {
 
         })
     function checkWinCondition() {
-        if(boxes[0].innerText == "x" && boxes[1].innerText == "x" && boxes[2].innerText == "xx"
+        if(boxes[0].innerText == "x" && boxes[1].innerText == "x" && boxes[2].innerText == "x"
             || boxes[3].innerText == "x" && boxes[4].innerText == "x" && boxes[5].innerText == "x"
             || boxes[6].innerText == "x" && boxes[7].innerText == "x" && boxes[8].innerText == "x"
             || boxes[0].innerText == "x" && boxes[4].innerText == "x" && boxes[8].innerText == "x"
@@ -60,7 +59,7 @@ startBtn.addEventListener("click", getName => {
             || boxes[1].innerText == "x" && boxes[4].innerText == "x" && boxes[7].innerText == "x"
             || boxes[2].innerText == "x" && boxes[5].innerText == "x" && boxes[8].innerText == "x"
         ){
-            return h3.innerText= Player1+" congatulations you won!";
+            return h3.innerText= Player1+" congratulations you won!";
         }
         else if(boxes[0].innerText == "o" && boxes[1].innerText == "o" && boxes[2].innerText == "o"
             || boxes[3].innerText == "o" && boxes[4].innerText == "o" && boxes[5].innerText == "o"
@@ -71,7 +70,7 @@ startBtn.addEventListener("click", getName => {
             || boxes[1].innerText == "o" && boxes[4].innerText == "o" && boxes[7].innerText == "o"
             || boxes[2].innerText == "o" && boxes[5].innerText == "o" && boxes[8].innerText == "o"
         ){
-            return h3.innerText=Player2+" congatulations you won!";
+            return h3.innerText=Player2+" congratulations you won!";
         }
         else if(ct == 10){
             return h3.innerText = "Match Tied";
