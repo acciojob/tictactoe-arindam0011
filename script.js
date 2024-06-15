@@ -33,18 +33,20 @@ startBtn.addEventListener("click", getName => {
             box.addEventListener("click", putValue);
 			
             function putValue(event) {
-				let box=event.target;
-                if (box.innerText == "") {
-                    if (ct % 2 != 0) {
-                        box.innerText = "x"
-                        h3.innerText = Player2+", You're Up!";
-                    }
-                    else {
-                        box.innerText = "o"
-                        h3.innerText = Player1+", You're Up!";
-                    }
-                }
-                ct++;
+				 let box = event.target;
+					    if (box.innerText == "") {
+					        if (ct % 2 != 0) {
+					            box.innerText = "x";
+					        } else {
+					            box.innerText = "o";
+					        }
+					        ct++;
+					        if (ct % 2 != 0) {
+					            h3.innerText = Player1 + ", You're Up!";
+					        } else {
+					            h3.innerText = Player2 + ", You're Up!";
+					        }
+					    }
                 checkWinCondition();
             }
 
